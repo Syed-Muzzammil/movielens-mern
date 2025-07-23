@@ -1,0 +1,46 @@
+.movie-card {
+  background-color: #181818;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+  margin: 10px;
+  width: 300px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-info input {
+  width: 90%;
+  margin: 5px 0;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+}
+
+.movie-info button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.success-msg {
+  color: #0f0;
+  font-size: 0.9rem;
+}
+
+.review-list ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}

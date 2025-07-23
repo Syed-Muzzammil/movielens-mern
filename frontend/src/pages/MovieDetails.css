@@ -1,0 +1,59 @@
+.details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.details-container h1 {
+  color: #e50914;
+}
+
+.details-container p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.details-container ul {
+  padding-left: 20px;
+}
+
+/* 🎯 New styles for review form */
+.rating-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rating-form input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+.rating-form button {
+  padding: 10px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rating-form button:hover {
+  background-color: #b00610;
+}
+
+.success-msg {
+  color: #0f0;
+  font-size: 14px;
+}
