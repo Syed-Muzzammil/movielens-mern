@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import './MovieDetails.css';
 
 const MovieDetails = () => {
@@ -15,16 +15,14 @@ const MovieDetails = () => {
   }, []);
 
   const fetchMovie = async () => {
-    const res = await axios.get(`http://localhost:5000/api/movies/${id}`);
+const res = await api.get(`/movies/${id}`);
     setMovie(res.data);
   };
 
   const handleSubmit = async () => {
     if (!rating || !review) return alert("Both fields are required.");
-    await axios.post(`http://localhost:5000/api/movies/rate/${id}`, {
-      rating: Number(rating),
-      review
-    });
+await api.post(`/movies/rate/${id}`, { rating: parseFloat(rating), review });
+
     setRating('');
     setReview('');
     setSubmitted(true);

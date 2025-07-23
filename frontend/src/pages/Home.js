@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import MovieCard from '../components/MovieCard';
 import './Home.css';
 
@@ -8,12 +8,12 @@ const Home = () => {
   const [query, setQuery] = useState('');
 
   const fetchMovies = async () => {
-    const res = await axios.get('http://localhost:5000/api/movies');
+const res = await api.get('/movies');
     setMovies(res.data);
   };
 
   const handleSearch = async () => {
-    const res = await axios.get(`http://localhost:5000/api/movies/search?q=${query}`);
+const res = await api.get(`/movies/search?q=${query}`);
     setMovies(res.data);
   };
 
